@@ -31,7 +31,7 @@ function GameWorld() {
             (BORDER_SIZE),
             (BORDER_SIZE));
     }
-    this.applyGroup = false;
+    this.applyGroup = true;
     //get the borders
     // reflection ball
     if (this.applyGroup) {
