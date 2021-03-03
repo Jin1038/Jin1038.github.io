@@ -3,7 +3,7 @@
 function GameWorld() {
     //0 is star2222, and 1 is star333
     this.groupType = 0;
-    this.applyGroup = false;
+    this.applyGroup = true;
     this.resetGameWorld();
     this.stick = new Stick({ x: this.whiteBall.position.x, y: this.whiteBall.position.y });
     this.gameOver = false;
@@ -91,7 +91,7 @@ function GameWorld() {
 }
 GameWorld.prototype.resetGameWorld = function () {
     if (0 == this.groupType) {
-        this.redBalls = [new Ball(new Vector2(Game.size.x / 2 + BORDER_SIZE / 3, Game.size.y - BORDER_SIZE / 4), Color.red)]
+        this.redBalls = [new Ball(new Vector2(Game.size.x / 2 + BORDER_SIZE / 3, Game.size.y - BORDER_SIZE / 1.9), Color.red)]
         this.yellowBalls = [new Ball(new Vector2(Game.size.x / 2 - BORDER_SIZE / 9, Game.size.y - BORDER_SIZE / 3), Color.yellow)];
         this.whiteBall = new Ball(new Vector2(Game.size.x / 2 - BORDER_SIZE / 3, Game.size.y - BORDER_SIZE / 4), Color.white);
     } else if (1 == this.groupType) {
